@@ -25,14 +25,37 @@
                     position="0 0 -15"
                     animation="
                     property: rotation;
-                    from: 0 0 0;
+                    from: 90 0 0;
                     to: 180 0 0; 
                     loop: true;
                     dir: altanate;
                     "
                     ></a-cone>
 
-                    
+                    <a-sphere 
+                    color="yellow"
+                    animation="
+                    property: position;
+                    from: 3 2 -21;
+                    to: 6 2 -7; 
+                    loop: true;
+                    dir: altanate;
+                    "
+                    ></a-sphere>  
+
+                    <a-torus 
+                    position="0 5 -15"
+                    color="red"
+                    radius=1
+                    radius-tubular="0.25"
+                    animation="
+                    property: rotation;
+                    from: 0 0 0;
+                    to: 0 365 0; 
+                    loop: true;
+                    dir: altanate;
+                    "
+                    ></a-torus>
 
         </a-scene>
     </body>
