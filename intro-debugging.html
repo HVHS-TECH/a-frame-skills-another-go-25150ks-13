@@ -4,7 +4,7 @@
 </head>
 
 <body>
-<a-scene background="color: #0a0015">
+<a-scene background="color:#0b0018">
 
   <!-- Camera -->
   <a-entity position="0 1.6 8">
@@ -12,78 +12,46 @@
   </a-entity>
 
   <!-- Ground -->
-  <a-plane rotation="-90 0 0"
-           width="100"
-           height="100"
-           color="#111">
-  </a-plane>
+  <a-plane rotation="-90 0 0" width="100" height="100" color="#1a0f2e"></a-plane>
 
-  <!-- Neon street -->
-  <a-box position="0 0.01 0"
-         width="3"
-         height="0.02"
-         depth="30"
-         color="#ff00aa"
-         material="emissive:#ff00aa">
-  </a-box>
+  <!-- Main festival street -->
+  <a-box position="0 0.01 -5" width="4" height="0.02" depth="40"
+         color="#ff4fa3" material="emissive:#ff4fa3"></a-box>
 
-  <!-- Buildings -->
-  <a-box position="-4 2 -5"
-         width="3"
-         height="4"
-         depth="3"
-         color="#2a1a40">
-  </a-box>
+  <!-- Japanese house -->
+  <a-box position="-4 1 -6" width="3" height="2" depth="3" color="#3a2a45"></a-box>
+  <a-cone position="-4 2.8 -6" radius-bottom="2.5" radius-top="0.1" height="1.5"
+          color="#2b1c34"></a-cone>
 
-  <a-box position="4 3 -8"
-         width="3"
-         height="6"
-         depth="3"
-         color="#1f1533">
-  </a-box>
+  <a-box position="4 1 -10" width="3" height="2" depth="3" color="#3a2a45"></a-box>
+  <a-cone position="4 2.8 -10" radius-bottom="2.5" radius-top="0.1" height="1.5"
+          color="#2b1c34"></a-cone>
 
-  <a-box position="-6 2 -12"
-         width="3"
-         height="4"
-         depth="3"
-         color="#2b1740">
-  </a-box>
+  <a-box position="-5 1 -14" width="3" height="2" depth="3" color="#3a2a45"></a-box>
+  <a-cone position="-5 2.8 -14" radius-bottom="2.5" radius-top="0.1" height="1.5"
+          color="#2b1c34"></a-cone>
 
-  <!-- Neon signs -->
-  <a-plane position="-4 3 -4"
-           width="2"
-           height="1"
-           color="#00ffff"
-           material="emissive:#00ffff">
-  </a-plane>
+  <!-- Torii gate -->
+  <a-box position="0 2 -3" width="0.4" height="4" depth="0.4" color="#ff3c3c"></a-box>
+  <a-box position="2 2 -3" width="0.4" height="4" depth="0.4" color="#ff3c3c"></a-box>
+  <a-box position="1 4 -3" width="3.5" height="0.4" depth="0.6" color="#ff3c3c"></a-box>
 
-  <a-plane position="4 4 -7"
-           width="2"
-           height="1"
-           color="#ff0080"
-           material="emissive:#ff0080">
-  </a-plane>
+  <!-- Lantern string -->
+  <a-sphere position="-1 3 -4" radius="0.25" color="#ffd27f" material="emissive:#ffd27f"></a-sphere>
+  <a-sphere position="0 3 -4" radius="0.25" color="#ffd27f" material="emissive:#ffd27f"></a-sphere>
+  <a-sphere position="1 3 -4" radius="0.25" color="#ffd27f" material="emissive:#ffd27f"></a-sphere>
+  <a-sphere position="2 3 -4" radius="0.25" color="#ffd27f" material="emissive:#ffd27f"></a-sphere>
 
-  <!-- Lantern lights -->
-  <a-sphere position="-1 3 -3" radius="0.2"
-            color="#ffcc66"
-            material="emissive:#ffcc66"></a-sphere>
+  <!-- Festival stalls -->
+  <a-box position="-2 0.8 -8" width="2" height="1.5" depth="1.5" color="#ff6b6b"></a-box>
+  <a-plane position="-2 1.8 -8" width="2.5" height="1" color="#ff9db6"></a-plane>
 
-  <a-sphere position="1 3 -5" radius="0.2"
-            color="#ffcc66"
-            material="emissive:#ffcc66"></a-sphere>
+  <a-box position="2 0.8 -12" width="2" height="1.5" depth="1.5" color="#6b9cff"></a-box>
+  <a-plane position="2 1.8 -12" width="2.5" height="1" color="#9dc0ff"></a-plane>
 
-  <a-sphere position="-2 3 -7" radius="0.2"
-            color="#ffcc66"
-            material="emissive:#ffcc66"></a-sphere>
-
-  <!-- Neon decorative shapes -->
-  <a-ring position="0 4 -10"
-          radius-inner="1"
-          radius-outer="1.2"
-          color="#00ffff"
-          material="emissive:#00ffff">
-  </a-ring>
+  <!-- Decorative neon shapes -->
+  <a-ring position="0 5 -15" radius-inner="1" radius-outer="1.2"
+          color="#00f7ff" material="emissive:#00f7ff"></a-ring>
 
 </a-scene>
 </body>
