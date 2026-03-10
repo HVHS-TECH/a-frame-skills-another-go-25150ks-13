@@ -1,63 +1,89 @@
 <html>
 <head>
-<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 </head>
 
 <body>
-<a-scene>
+<a-scene background="color: #0a0015">
 
-<!-- Sky -->
-<a-sky color="#9fd3ff"></a-sky>
+  <!-- Camera -->
+  <a-entity position="0 1.6 8">
+    <a-camera></a-camera>
+  </a-entity>
 
-<!-- Ground -->
-<a-plane rotation="-90 0 0"
-         width="80"
-         height="80"
-         color="#ffffff">
-</a-plane>
+  <!-- Ground -->
+  <a-plane rotation="-90 0 0"
+           width="100"
+           height="100"
+           color="#111">
+  </a-plane>
 
-<!-- Stage Platform -->
-<a-box position="0 0.5 -8"
-       width="10"
-       height="1"
-       depth="6"
-       color="#ff6ec7">
-</a-box>
+  <!-- Neon street -->
+  <a-box position="0 0.01 0"
+         width="3"
+         height="0.02"
+         depth="30"
+         color="#ff00aa"
+         material="emissive:#ff00aa">
+  </a-box>
 
-<!-- Stage Screen -->
-<a-box position="0 4 -10"
-       width="8"
-       height="4"
-       depth="0.5"
-       color="#222">
-</a-box>
+  <!-- Buildings -->
+  <a-box position="-4 2 -5"
+         width="3"
+         height="4"
+         depth="3"
+         color="#2a1a40">
+  </a-box>
 
-<!-- Decorative Color Pillars -->
-<a-cylinder position="-6 2 -6"
-            height="4"
-            radius="0.6"
-            color="#00e5ff">
-</a-cylinder>
+  <a-box position="4 3 -8"
+         width="3"
+         height="6"
+         depth="3"
+         color="#1f1533">
+  </a-box>
 
-<a-cylinder position="6 2 -6"
-            height="4"
-            radius="0.6"
-            color="#ff3cac">
-</a-cylinder>
+  <a-box position="-6 2 -12"
+         width="3"
+         height="4"
+         depth="3"
+         color="#2b1740">
+  </a-box>
 
-<!-- Floating Music Cubes -->
-<a-box position="-3 3 -4"
-       color="#00fff7"
-       animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
-</a-box>
+  <!-- Neon signs -->
+  <a-plane position="-4 3 -4"
+           width="2"
+           height="1"
+           color="#00ffff"
+           material="emissive:#00ffff">
+  </a-plane>
 
-<a-box position="3 3 -4"
-       color="#ff4fd8"
-       animation="property: rotation; to: 360 0 360; loop: true; dur: 5000">
-</a-box>
+  <a-plane position="4 4 -7"
+           width="2"
+           height="1"
+           color="#ff0080"
+           material="emissive:#ff0080">
+  </a-plane>
 
-<!-- Camera / Player -->
-<a-camera position="0 1.6 5"></a-camera>
+  <!-- Lantern lights -->
+  <a-sphere position="-1 3 -3" radius="0.2"
+            color="#ffcc66"
+            material="emissive:#ffcc66"></a-sphere>
+
+  <a-sphere position="1 3 -5" radius="0.2"
+            color="#ffcc66"
+            material="emissive:#ffcc66"></a-sphere>
+
+  <a-sphere position="-2 3 -7" radius="0.2"
+            color="#ffcc66"
+            material="emissive:#ffcc66"></a-sphere>
+
+  <!-- Neon decorative shapes -->
+  <a-ring position="0 4 -10"
+          radius-inner="1"
+          radius-outer="1.2"
+          color="#00ffff"
+          material="emissive:#00ffff">
+  </a-ring>
 
 </a-scene>
 </body>
