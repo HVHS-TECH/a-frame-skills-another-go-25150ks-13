@@ -63,12 +63,19 @@
       </a-entity>
 
       <a-entity id="rig" movement-controls="speed: 0.3">
-        <a-entity camera position="0 1.6 10" look-controls>
-            <a-cursor color="#00ffff"></a-cursor>
+        <a-entity camera 
+                  position="0 1.6 10" 
+                  look-controls="pointerLockEnabled: true"> <a-cursor color="#00ffff"></a-cursor>
         </a-entity>
       </a-entity>
-      
 
     </a-scene>
+
+    <script>
+      document.body.addEventListener('click', function () {
+        document.querySelector('a-scene').canvas.requestPointerLock();
+      });
+    </script>
+
   </body>
 </html>
