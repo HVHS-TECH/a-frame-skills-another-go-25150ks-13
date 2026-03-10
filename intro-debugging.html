@@ -1,57 +1,115 @@
 <html>
 <head>
-  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 </head>
 
 <body>
-<a-scene background="color:#0b0018">
+<a-scene background="color:#070012">
 
-  <!-- Camera -->
-  <a-entity position="0 1.6 8">
-    <a-camera></a-camera>
-  </a-entity>
+<!-- Camera -->
+<a-entity position="0 1.6 10">
+<a-camera wasd-controls="acceleration:40"></a-camera>
+</a-entity>
 
-  <!-- Ground -->
-  <a-plane rotation="-90 0 0" width="100" height="100" color="#1a0f2e"></a-plane>
+<!-- Ground -->
+<a-plane rotation="-90 0 0" width="200" height="200" color="#120a20"></a-plane>
 
-  <!-- Main festival street -->
-  <a-box position="0 0.01 -5" width="4" height="0.02" depth="40"
-         color="#ff4fa3" material="emissive:#ff4fa3"></a-box>
+<!-- Festival Street -->
+<a-box position="0 0.02 -10" width="6" height="0.05" depth="120"
+color="#ff3ca6" material="emissive:#ff3ca6"></a-box>
 
-  <!-- Japanese house -->
-  <a-box position="-4 1 -6" width="3" height="2" depth="3" color="#3a2a45"></a-box>
-  <a-cone position="-4 2.8 -6" radius-bottom="2.5" radius-top="0.1" height="1.5"
-          color="#2b1c34"></a-cone>
+<!-- TORII GATES -->
 
-  <a-box position="4 1 -10" width="3" height="2" depth="3" color="#3a2a45"></a-box>
-  <a-cone position="4 2.8 -10" radius-bottom="2.5" radius-top="0.1" height="1.5"
-          color="#2b1c34"></a-cone>
+<a-box position="-2 2 -5" width="0.4" height="4" depth="0.4" color="#ff3a3a"></a-box>
+<a-box position="2 2 -5" width="0.4" height="4" depth="0.4" color="#ff3a3a"></a-box>
+<a-box position="0 4 -5" width="5" height="0.4" depth="0.6" color="#ff3a3a"></a-box>
 
-  <a-box position="-5 1 -14" width="3" height="2" depth="3" color="#3a2a45"></a-box>
-  <a-cone position="-5 2.8 -14" radius-bottom="2.5" radius-top="0.1" height="1.5"
-          color="#2b1c34"></a-cone>
+<a-box position="-2 2 -30" width="0.4" height="4" depth="0.4" color="#ff3a3a"></a-box>
+<a-box position="2 2 -30" width="0.4" height="4" depth="0.4" color="#ff3a3a"></a-box>
+<a-box position="0 4 -30" width="5" height="0.4" depth="0.6" color="#ff3a3a"></a-box>
 
-  <!-- Torii gate -->
-  <a-box position="0 2 -3" width="0.4" height="4" depth="0.4" color="#ff3c3c"></a-box>
-  <a-box position="2 2 -3" width="0.4" height="4" depth="0.4" color="#ff3c3c"></a-box>
-  <a-box position="1 4 -3" width="3.5" height="0.4" depth="0.6" color="#ff3c3c"></a-box>
+<!-- PAGODA -->
 
-  <!-- Lantern string -->
-  <a-sphere position="-1 3 -4" radius="0.25" color="#ffd27f" material="emissive:#ffd27f"></a-sphere>
-  <a-sphere position="0 3 -4" radius="0.25" color="#ffd27f" material="emissive:#ffd27f"></a-sphere>
-  <a-sphere position="1 3 -4" radius="0.25" color="#ffd27f" material="emissive:#ffd27f"></a-sphere>
-  <a-sphere position="2 3 -4" radius="0.25" color="#ffd27f" material="emissive:#ffd27f"></a-sphere>
+<a-cylinder position="0 1 -60" radius="4" height="2" color="#332046"></a-cylinder>
+<a-cone position="0 3 -60" radius-bottom="5" height="2" color="#251536"></a-cone>
+<a-cone position="0 4.8 -60" radius-bottom="4" height="1.8" color="#251536"></a-cone>
+<a-cone position="0 6.2 -60" radius-bottom="3" height="1.6" color="#251536"></a-cone>
 
-  <!-- Festival stalls -->
-  <a-box position="-2 0.8 -8" width="2" height="1.5" depth="1.5" color="#ff6b6b"></a-box>
-  <a-plane position="-2 1.8 -8" width="2.5" height="1" color="#ff9db6"></a-plane>
+<!-- JAPANESE HOUSES ROW -->
 
-  <a-box position="2 0.8 -12" width="2" height="1.5" depth="1.5" color="#6b9cff"></a-box>
-  <a-plane position="2 1.8 -12" width="2.5" height="1" color="#9dc0ff"></a-plane>
+<!-- Left side -->
+<a-box position="-8 1 -12" width="4" height="2" depth="4" color="#352046"></a-box>
+<a-cone position="-8 2.7 -12" radius-bottom="3" height="1.5" color="#241433"></a-cone>
 
-  <!-- Decorative neon shapes -->
-  <a-ring position="0 5 -15" radius-inner="1" radius-outer="1.2"
-          color="#00f7ff" material="emissive:#00f7ff"></a-ring>
+<a-box position="-8 1 -20" width="4" height="2" depth="4" color="#352046"></a-box>
+<a-cone position="-8 2.7 -20" radius-bottom="3" height="1.5" color="#241433"></a-cone>
+
+<a-box position="-8 1 -28" width="4" height="2" depth="4" color="#352046"></a-box>
+<a-cone position="-8 2.7 -28" radius-bottom="3" height="1.5" color="#241433"></a-cone>
+
+<a-box position="-8 1 -36" width="4" height="2" depth="4" color="#352046"></a-box>
+<a-cone position="-8 2.7 -36" radius-bottom="3" height="1.5" color="#241433"></a-cone>
+
+<!-- Right side -->
+
+<a-box position="8 1 -16" width="4" height="2" depth="4" color="#352046"></a-box>
+<a-cone position="8 2.7 -16" radius-bottom="3" height="1.5" color="#241433"></a-cone>
+
+<a-box position="8 1 -24" width="4" height="2" depth="4" color="#352046"></a-box>
+<a-cone position="8 2.7 -24" radius-bottom="3" height="1.5" color="#241433"></a-cone>
+
+<a-box position="8 1 -32" width="4" height="2" depth="4" color="#352046"></a-box>
+<a-cone position="8 2.7 -32" radius-bottom="3" height="1.5" color="#241433"></a-cone>
+
+<a-box position="8 1 -40" width="4" height="2" depth="4" color="#352046"></a-box>
+<a-cone position="8 2.7 -40" radius-bottom="3" height="1.5" color="#241433"></a-cone>
+
+<!-- FESTIVAL STALLS -->
+
+<a-box position="-3 1 -15" width="2.5" height="2" depth="2" color="#ff6c7a"></a-box>
+<a-plane position="-3 2 -15" width="3" height="1.2" color="#ffb3c3"></a-plane>
+
+<a-box position="3 1 -22" width="2.5" height="2" depth="2" color="#6c7cff"></a-box>
+<a-plane position="3 2 -22" width="3" height="1.2" color="#b3bcff"></a-plane>
+
+<a-box position="-3 1 -28" width="2.5" height="2" depth="2" color="#ff9b4d"></a-box>
+<a-plane position="-3 2 -28" width="3" height="1.2" color="#ffd3a8"></a-plane>
+
+<a-box position="3 1 -35" width="2.5" height="2" depth="2" color="#55d4ff"></a-box>
+<a-plane position="3 2 -35" width="3" height="1.2" color="#b6ecff"></a-plane>
+
+<!-- LANTERN STRINGS -->
+
+<a-sphere position="-2 3 -8" radius="0.25" color="#ffd88a" material="emissive:#ffd88a"></a-sphere>
+<a-sphere position="-1 3 -8" radius="0.25" color="#ffd88a" material="emissive:#ffd88a"></a-sphere>
+<a-sphere position="0 3 -8" radius="0.25" color="#ffd88a" material="emissive:#ffd88a"></a-sphere>
+<a-sphere position="1 3 -8" radius="0.25" color="#ffd88a" material="emissive:#ffd88a"></a-sphere>
+<a-sphere position="2 3 -8" radius="0.25" color="#ffd88a" material="emissive:#ffd88a"></a-sphere>
+
+<a-sphere position="-2 3 -25" radius="0.25" color="#ffd88a" material="emissive:#ffd88a"></a-sphere>
+<a-sphere position="-1 3 -25" radius="0.25" color="#ffd88a" material="emissive:#ffd88a"></a-sphere>
+<a-sphere position="0 3 -25" radius="0.25" color="#ffd88a" material="emissive:#ffd88a"></a-sphere>
+<a-sphere position="1 3 -25" radius="0.25" color="#ffd88a" material="emissive:#ffd88a"></a-sphere>
+<a-sphere position="2 3 -25" radius="0.25" color="#ffd88a" material="emissive:#ffd88a"></a-sphere>
+
+<!-- NEON SIGNS -->
+
+<a-plane position="-7 3 -18" width="2" height="1" color="#00f7ff"
+material="emissive:#00f7ff"></a-plane>
+
+<a-plane position="7 3 -30" width="2" height="1" color="#ff4fcf"
+material="emissive:#ff4fcf"></a-plane>
+
+<!-- FIREWORKS STYLE LIGHTS -->
+
+<a-sphere position="-10 12 -50" radius="0.4"
+color="#ff4fd0" material="emissive:#ff4fd0"></a-sphere>
+
+<a-sphere position="10 10 -45" radius="0.4"
+color="#4ff3ff" material="emissive:#4ff3ff"></a-sphere>
+
+<a-sphere position="0 14 -55" radius="0.4"
+color="#ffd84f" material="emissive:#ffd84f"></a-sphere>
 
 </a-scene>
 </body>
