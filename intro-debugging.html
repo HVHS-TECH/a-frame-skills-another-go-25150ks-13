@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kaguya: The Golden Festival</title>
+    <title>Kaguya: The Neon Capital</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
   </head>
   <body>
-    <a-scene fog="type: exponential; color: #441122; density: 0.015">
+    <a-scene fog="type: exponential; color: #050510; density: 0.02">
       
       <a-assets>
-        <a-mixin id="shrine-red" material="color: #b01a1a; emissive: #ff4400; emissiveIntensity: 0.4"></a-mixin>
-        <a-mixin id="neon-glow" material="shader: flat; emissiveIntensity: 2.5"></a-mixin>
-        <a-mixin id="banner" geometry="primitive: plane; width: 15; height: 1" material="side: double; transparent: true; opacity: 0.9"></a-mixin>
+        <a-mixin id="neon-pink" material="shader: flat; color: #ff00ff; emissive: #ff00ff; emissiveIntensity: 3"></a-mixin>
+        <a-mixin id="neon-cyan" material="shader: flat; color: #00ffff; emissive: #00ffff; emissiveIntensity: 3"></a-mixin>
+        <a-mixin id="neon-gold" material="shader: flat; color: #ffaa00; emissive: #ffaa00; emissiveIntensity: 2"></a-mixin>
+        <a-mixin id="roof" geometry="primitive: cone; radiusBottom: 3; height: 1; segmentsRadial: 4" material="color: #111" rotation="0 45 0"></a-mixin>
       </a-assets>
 
-      <a-sky color="#1a0a2e"></a-sky>
-      <a-light type="ambient" color="#ff9999" intensity="0.5"></a-light>
-      <a-light type="hemisphere" color="#ffcc00" groundColor="#441122" intensity="0.8"></a-light>
+      <a-entity environment="preset: starry; groundColor: #050510; grid: none; dressing: none; lighting: point"></a-entity>
 
-      <a-entity position="0 10 -10" rotation="0 0 5">
-        <a-entity mixin="banner" material="color: #ff4444" position="0 0 0" rotation="80 10 0"></a-entity>
-        <a-entity mixin="banner" material="color: #ffcc00" position="0 1 -5" rotation="85 -15 0"></a-entity>
-        <a-entity mixin="banner" material="color: #00ffff" position="0 2 -10" rotation="75 5 0"></a-entity>
+      <a-entity position="0 0 -30" scale="2 2 2">
+        <a-box position="-4 4 0" width="0.8" height="8" depth="0.8" color="#331111"></a-box>
+        <a-box position="4 4 0" width="0.8" height="8" depth="0.8" color="#331111"></a-box>
+        <a-box position="0 8 0" width="12" height="0.6" depth="1.2" color="#441111"></a-box>
+        <a-box position="0 8.2 0.7" width="12.2" height="0.1" depth="0.1" mixin="neon-gold"></a-box>
+        <a-light type="point" color="#ffaa00" intensity="3" distance="20" position="0 7 2"></a-light>
       </a-entity>
 
-      <a-entity position="0 6 -5">
-        <a-sphere radius="0.15" color="#00ffff" mixin="neon-glow" animation="property: position; from: -10 0 -10; to: 10 5 0; dur: 8000; loop: true"></a-sphere>
-        <a-cone radius-bottom="1.5" height="0.5" color="#ff00ff" material="opacity: 0.8" position="4 2 -8" rotation="20 0 0" mixin="neon-glow"></a-cone>
-        <a-cone radius-bottom="1.5" height="0.5" color="#ffaa00" material="opacity: 0.8" position="-5 4 -12" rotation="-15 0 0" mixin="neon-glow"></a-cone>
+      <a-entity position="-18 0 -20" rotation="0 45 0">
+        <a-box position="0 2.5 0" width="5" height="5" depth="5" color="#0a0a0a"></a-box>
+        <a-entity mixin="roof" position="0 5.5 0" scale="1.2 1.2 1.2" material="emissive: #ff00ff"></a-entity>
+        <a-box position="0 8 0" width="4" height="4" depth="4" color="#0a0a0a"></a-box>
+        <a-entity mixin="roof" position="0 10.5 0" material="emissive: #ff00ff"></a-entity>
+        <a-plane position="0 2.5 2.51" width="2" height="2" mixin="neon-pink"></a-plane>
       </a-entity>
 
-      <a-entity position="-6 0 -5">
-        <a-box mixin="shrine-red" width="3" height="3" depth="3" position="0 1.5 0"></a-box>
-        <a-box position="0 3 0" width="3.5" height="0.2" depth="3.5" color="#111" rotation="10 0 0"></a-box>
-        <a-plane position="0 2 1.51" width="2" height="1.5" color="#00ffff" mixin="neon-glow" text="value: KAGUYA; align: center; width: 5"></a-plane>
+      <a-entity position="18 0 -25" rotation="0 -30 0">
+        <a-box position="0 2.5 0" width="5" height="5" depth="5" color="#0a0a0a"></a-box>
+        <a-entity mixin="roof" position="0 5.5 0" scale="1.2 1.2 1.2" material="emissive: #00ffff"></a-entity>
+        <a-box position="0 8 0" width="4" height="4" depth="4" color="#0a0a0a"></a-box>
+        <a-entity mixin="roof" position="0 10.5 0" material="emissive: #00ffff"></a-entity>
+        <a-plane position="0 8 2.01" width="1.5" height="1.5" mixin="neon-cyan"></a-plane>
       </a-entity>
 
-      <a-entity position="6 0 -8">
-        <a-box mixin="shrine-red" width="3" height="3" depth="3" position="0 1.5 0"></a-box>
-        <a-box position="0 3 0" width="3.5" height="0.2" depth="3.5" color="#111" rotation="10 0 0"></a-box>
-        <a-plane position="0 2 1.51" width="2" height="1.5" color="#ff00ff" mixin="neon-glow"></a-plane>
+      <a-entity position="-10 0 -12">
+        <a-cylinder radius="0.2" height="5" color="#111"></a-cylinder>
+        <a-sphere position="0 5 0" radius="2.5" color="#ff00ff" material="shader: flat; opacity: 0.5; transparent: true"></a-sphere>
+        <a-light type="point" color="#ff00ff" intensity="1" distance="10" position="0 5 0"></a-light>
       </a-entity>
 
-      <a-entity position="0 0 -30">
-        <a-box mixin="shrine-red" width="10" height="20" depth="10" position="0 10 0">
-          <a-entity geometry="primitive: cone; radiusBottom: 8; height: 4; segmentsRadial: 4" position="0 12 0" rotation="0 45 0" color="#111"></a-entity>
-          <a-plane position="0 10 5.1" width="6" height="6" color="#00ffff" mixin="neon-glow" material="opacity: 0.5"></a-plane>
-        </a-box>
+      <a-entity position="0 15 -20">
+        <a-cone radius-bottom="0.2" height="0.8" rotation="90 0 0" mixin="neon-cyan"
+                animation="property: position; from: -20 0 0; to: 20 5 -10; dur: 12000; loop: true; easing: linear"></a-cone>
+        <a-cone radius-bottom="0.2" height="0.8" rotation="90 0 0" mixin="neon-pink"
+                animation="property: position; from: 25 -5 -5; to: -25 2 -15; dur: 15000; loop: true; easing: linear"></a-cone>
       </a-entity>
 
-      <a-plane rotation="-90 0 0" width="100" height="100" color="#220011" material="roughness: 0.1"></a-plane>
+      <a-entity position="0 0 -5">
+        <a-sphere position="-3 1 -5" radius="0.2" mixin="neon-gold"></a-sphere>
+        <a-sphere position="3 1 -5" radius="0.2" mixin="neon-gold"></a-sphere>
+        <a-sphere position="-3 1 -15" radius="0.2" mixin="neon-gold"></a-sphere>
+        <a-sphere position="3 1 -15" radius="0.2" mixin="neon-gold"></a-sphere>
+      </a-entity>
 
       <a-entity movement-controls="speed: 0.3">
-        <a-entity camera position="0 1.6 5" look-controls></a-entity>
+        <a-entity camera position="0 1.6 10" look-controls></a-entity>
       </a-entity>
 
     </a-scene>
