@@ -1,16 +1,64 @@
-<!DOCTYPE html>
-<html lang=en>
-    <head>
-        <title>A-Frame scene</title>
-        <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-    </head>
-    <body>
-        <a-scene>
-            <a-sphere  position="-2 -1 -4" color="red" ></a-sphere>
-            <a-sphere position="-2 3 -4" colour="orange" ></a-sphere>
-            <a-sphere position="2 -1 -4" color="limegreen" ></a-sphere
-            <a-sphere position="2 3 -4" color="blue" ></a-sphere>
-        </a-scene>
-        <a-sphere position="0 1 -4" color="pink" ></a-sphere>
-    </body>
+<html>
+<head>
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+<a-scene>
+
+<!-- Sky -->
+<a-sky color="#9fd3ff"></a-sky>
+
+<!-- Ground -->
+<a-plane rotation="-90 0 0"
+         width="80"
+         height="80"
+         color="#ffffff">
+</a-plane>
+
+<!-- Stage Platform -->
+<a-box position="0 0.5 -8"
+       width="10"
+       height="1"
+       depth="6"
+       color="#ff6ec7">
+</a-box>
+
+<!-- Stage Screen -->
+<a-box position="0 4 -10"
+       width="8"
+       height="4"
+       depth="0.5"
+       color="#222">
+</a-box>
+
+<!-- Decorative Color Pillars -->
+<a-cylinder position="-6 2 -6"
+            height="4"
+            radius="0.6"
+            color="#00e5ff">
+</a-cylinder>
+
+<a-cylinder position="6 2 -6"
+            height="4"
+            radius="0.6"
+            color="#ff3cac">
+</a-cylinder>
+
+<!-- Floating Music Cubes -->
+<a-box position="-3 3 -4"
+       color="#00fff7"
+       animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
+</a-box>
+
+<a-box position="3 3 -4"
+       color="#ff4fd8"
+       animation="property: rotation; to: 360 0 360; loop: true; dur: 5000">
+</a-box>
+
+<!-- Camera / Player -->
+<a-camera position="0 1.6 5"></a-camera>
+
+</a-scene>
+</body>
 </html>
