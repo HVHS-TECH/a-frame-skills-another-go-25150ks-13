@@ -83,9 +83,14 @@
 </audio>
 
 
+
     </a-scene>
 
     <script>
+
+       const audio = new Audio('C:\Users\Admin\Downloads\Screen Recording 2026-03-20 183441.mp3');
+audio.play();
+
       document.body.addEventListener('click', function () {
         document.querySelector('a-scene').canvas.requestPointerLock();
       });
